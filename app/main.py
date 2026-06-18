@@ -13,7 +13,7 @@ def create_person_list(people: list) -> list:
         list_of_people.append(Person(person.get("name"), person.get("age")))
 
     for person in people:
-        current_person = Person.people[person["name"]]
+        current_person = Person.people[person.get("name")]
         if person.get("wife"):
             current_person.wife = Person.people[person["wife"]]
 
